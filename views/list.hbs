@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/anime"><i class="fa fa-plus"></i> Create New</a> Anime Details List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Main Character</th>
+            <th>No of Episodes</th>
+            <th>Release Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.maincharacter}}</td>
+            <td>{{this.noofepisodes}}</td>
+            <td>{{this.releasedate}}</td>
+            <td>
+                <a href="/anime/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/anime/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

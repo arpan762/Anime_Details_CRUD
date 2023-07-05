@@ -1,0 +1,27 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/anime" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{anime._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Anime Name" value="{{anime.name}}">
+    </div>
+    <div class="form-group">
+        <label>Main Character</label>
+        <input type="text" class="form-control" name="maincharacter" placeholder="Main Character" value="{{anime.maincharacter}}">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>No of Episodes</label>
+            <input type="Number" class="form-control" name="noofepisodes" placeholder="No of Episoodes" value="{{anime.noofepisodes}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Release Date</label>
+            <input type="text" class="form-control" name="releasedate" placeholder="Release Date" value="{{anime.releasedate}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/anime/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

@@ -1,0 +1,1 @@
+a basic form of anime details by getting datas from the user and storing all these details to the mongodb database using CRUD operation
